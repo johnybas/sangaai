@@ -63,7 +63,7 @@ const Start = ({navigation}) => {
         <TouchableOpacity
           style={styles.startButton}
           onPress={() => navigation.replace('Tabs')}>
-          <Text style={{...FONTS.semiH2}}>Start Shopping</Text>
+          <Text style={{...FONTS.h2}}>Get Started</Text>
         </TouchableOpacity>
       </View>
     );

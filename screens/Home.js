@@ -12,6 +12,7 @@ import {
 import {SafeAreaView} from 'react-native-safe-area-context';
 
 import {dummyData, images, COLORS, SIZES, FONTS, icons} from '../constants';
+import {Location} from './HomeScreen/components';
 
 const numCols = 2;
 
@@ -92,34 +93,7 @@ const Home = ({navigation}) => {
             }}
           />
         </View>
-        <View
-          style={{
-            justifyContent: 'center',
-            alignItems: 'flex-start',
-            marginTop: 10,
-            paddingHorizontal: SIZES.padding,
-          }}>
-          {/* Location */}
-          <TouchableOpacity
-            style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-            }}>
-            <Image
-              source={icons.location}
-              resizeMode="contain"
-              style={{width: 15, height: 15}}
-            />
-            <Text style={{...FONTS.semiH4, marginLeft: 5, marginRight: 10}}>
-              Location...
-            </Text>
-            <Image
-              source={icons.arrowDown}
-              resizeMode="contain"
-              style={{width: 15, height: 15}}
-            />
-          </TouchableOpacity>
-        </View>
+        <Location navigation={navigation} />
 
         {/* Search */}
         {renderSearch()}

@@ -12,6 +12,11 @@ import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
+// added start
+// import com.facebook.react.bridge.JSIModulePackage; // <- add
+// import com.swmansion.reanimated.ReanimatedJSIModulePackage; // <- add
+// added end
+
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost =
@@ -34,7 +39,13 @@ public class MainApplication extends Application implements ReactApplication {
         protected String getJSMainModuleName() {
           return "index";
         }
+
+        // added
+        // @Override
+        // protected JSIModulePackage getJSIModulePackage() {
+        //   return new ReanimatedJSIModulePackage(); // <- add
       };
+
 
   @Override
   public ReactNativeHost getReactNativeHost() {

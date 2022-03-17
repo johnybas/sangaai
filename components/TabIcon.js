@@ -3,7 +3,7 @@ import {View, Image} from 'react-native';
 
 import {COLORS} from '../constants';
 
-const TabIcon = ({focused, icon, iconFocused}) => {
+export const TabIcon = ({focused, icon, iconFocused}) => {
   return (
     <View
       style={{
@@ -19,7 +19,7 @@ const TabIcon = ({focused, icon, iconFocused}) => {
           style={{
             width: 24,
             height: 24,
-            tintColor: COLORS.darkGreen,
+            tintColor: COLORS.black,
           }}
         />
       ) : (
@@ -36,5 +36,3 @@ const TabIcon = ({focused, icon, iconFocused}) => {
     </View>
   );
 };
-
-export default TabIcon;
